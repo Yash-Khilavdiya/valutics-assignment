@@ -88,14 +88,17 @@ lb = LibraryManager()
 print("Menu : ")
 opt_selected = int(input("Enter 1 for adding new book.\nEnter 2 for displaying all the books.\nEnter 4 for displaying all the books.\n"))
 
-if opt_selected == 1:
-    book1.add_book()
-elif opt_selected == 2:
-    book1.list_all_books()
-elif opt_selected == 3:
-    book1.borrow_or_return_a_book()
-else:
-    book1.search_for_book()
+while True:
+    if opt_selected == 1:
+        book1.add_book()
+    elif opt_selected == 2:
+        book1.list_all_books()
+    elif opt_selected == 3:
+        book1.borrow_or_return_a_book()
+    elif opt_selected == "\n":
+        break
+    else:
+        print("\n to exit")
 
 # list all books
 # Serarch for books
